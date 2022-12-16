@@ -1,0 +1,15 @@
+<%- include("partials/header"); -%>
+<div class="container">
+  <h1>Welcome <%= foundList.userName%></h1>
+  <table>
+    <tr>
+      <th>Username:</th>
+      <th><%= foundList.userName %></th>
+    </tr>
+  </table>
+  <form action="/logout" method="post">
+    <button type="submit">Log Out</button>
+  </form>
+
+  <%- include("partials/footer"); -%>
+</div>

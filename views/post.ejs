@@ -1,0 +1,24 @@
+<%- include("partials/header"); -%> <% if(foundList.logged === true){%>
+
+<div class="container">
+  <h1><%=title%></h1>
+  <p><%=content%></p>
+  <p><strong>Location: </strong> <%= addy %></p>
+  <form action="/review" method="post">
+    <button type="submit" href="/review/<%=_id%>">Add review</button>
+  </form>
+  <h1>Reviews</h1>
+  <p><strong>Username: </strong><%= foundList.userName %></p>
+  <p><strong>Rating </strong><%= %></p>
+  <p><strong>Reviews: </strong><%= %></p>
+  <% } else{%>
+
+  <h1><%=title%></h1>
+  <p><%=content%></p>
+  <p><%= addy %></p>
+  <h1>Reviews</h1>
+  <p><strong>Username: </strong><%= foundList.userName %></p>
+  <p><strong>Rating </strong><%= %></p>
+  <p><strong>Reviews: </strong><%= %></p>
+  <% } %> <%- include("partials/footer"); -%>
+</div>
